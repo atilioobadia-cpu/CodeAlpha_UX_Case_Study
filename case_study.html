@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UX Case Study - Zomato</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 20mm; }
+  body { font-family:'Inter',sans-serif; color:#1F2937; line-height:1.6; max-width:800px; margin:0 auto; padding:20px; }
+  h1 { font-size:28px; font-weight:800; color:#E23744; margin:0 0 4px; }
+  h2 { font-size:20px; font-weight:700; color:#1F2937; margin:24px 0 8px; border-bottom:2px solid #E23744; padding-bottom:4px; }
+  h3 { font-size:15px; font-weight:600; margin:14px 0 4px; }
+  p { margin:8px 0; }
+  ul,ol { margin:8px 0 8px 20px; }
+  .meta { color:#6B7280; font-size:13px; margin-bottom:20px; }
+  .box { background:#F9FAFB; border:1px solid #E5E7EB; border-radius:10px; padding:14px; margin:12px 0; }
+  .strength { border-left:4px solid #10B981; padding-left:12px; margin:8px 0; }
+  .weak { border-left:4px solid #EF4444; padding-left:12px; margin:8px 0; }
+  .sketch { background:#F3F4F6; border:2px dashed #9CA3AF; border-radius:10px; padding:16px; margin:12px 0; text-align:center; }
+  .sketch .label { font-size:12px; color:#6B7280; font-weight:600; margin-bottom:8px; }
+  .screen-mock { display:inline-block; width:220px; background:#fff; border:1px solid #D1D5DB; border-radius:16px; padding:10px; margin:8px; vertical-align:top; box-shadow:0 4px 12px rgba(0,0,0,.06); }
+  .screen-mock .bar { height:28px; background:#E23744; border-radius:8px; color:#fff; font-size:11px; display:flex; align-items:center; padding:0 8px; font-weight:600; }
+  .screen-mock .item { background:#F3F4F6; border-radius:6px; height:24px; margin:6px 0; font-size:11px; display:flex; align-items:center; padding:0 8px; color:#6B7280; }
+  .pagebreak { page-break-after: always; }
+  .tag { display:inline-block; background:#FEE2E2; color:#991B1B; font-size:11px; font-weight:600; padding:2px 8px; border-radius:6px; margin:2px; }
+</style>
+</head>
+<body>
+
+<h1>UX Case Study: Zomato</h1>
+<p class="meta">CodeAlpha Internship — Month 1 · Task 3 (UI/UX Design) · Prepared by: Intern</p>
+
+<h2>1. Introduction</h2>
+<p>Zomato is a leading food-delivery and restaurant-discovery platform. This case study analyzes its user journey, highlights strengths and weaknesses, and proposes three evidence-based improvements with mockups.</p>
+
+<h2>2. User Journey Analysis</h2>
+<ol>
+  <li><b>Discovery:</b> User opens app → sees banners, collections, search bar.</li>
+  <li><b>Search & Filter:</b> Types restaurant/dish → applies cuisine/price/rating filters.</li>
+  <li><b>Selection:</b> Views restaurant page → menu, ratings, reviews, photos.</li>
+  <li><b>Cart:</b> Adds items → customizes (size, toppings) → reviews cart.</li>
+  <li><b>Checkout:</b> Selects address → payment → applies coupon → places order.</li>
+  <li><b>Tracking:</b> Live order tracking → delivery → rating/review.</li>
+</ol>
+
+<h2>3. Strengths</h2>
+<div class="strength"><b>Fast search & rich filters:</b> Quick restaurant/dish search with cuisine, price, rating filters.</div>
+<div class="strength"><b>Live order tracking:</b> Real-time map tracking builds trust and reduces anxiety.</div>
+<div class="strength"><b>Multiple payment options:</b> Cards, UPI, wallets, COD — broad accessibility.</div>
+<div class="strength"><b>Reviews & photos:</b> User-generated content aids decision-making.</div>
+<div class="strength"><b>Personalized collections:</b> "Best of" lists surface relevant choices.</div>
+
+<h2>4. Weaknesses</h2>
+<div class="weak"><b>Cluttered home screen:</b> Too many banners, collections and pop-ups overwhelm first-time users.</div>
+<div class="weak"><b>Aggressive upselling:</b> Pop-ups for Zomato Gold/Pro interrupt the ordering flow.</div>
+<div class="weak"><b>Inconsistent filters:</b> Filter placement differs between search and restaurant pages.</div>
+<div class="weak"><b>Checkout friction:</b> Address selection and coupon application require multiple taps.</div>
+<div class="weak"><b>Accessibility gaps:</b> Low contrast on some labels; small tap targets on chips.</div>
+<div class="weak"><b>Dark patterns:</b> Pre-selected "donate a meal" and auto-applied tips.</div>
+
+<div class="pagebreak"></div>
+
+<h2>5. Proposed Improvements</h2>
+
+<h3>Improvement 1 — Simplified Home & Smart Search</h3>
+<p><span class="tag">Discovery</span> Reduce cognitive load by decluttering the home screen and making search the primary action.</p>
+<ul>
+  <li>Single prominent search bar at top; categories as horizontal scrollable chips below.</li>
+  <li>Limit to 3 featured collections; move rest to "Explore" tab.</li>
+  <li>Remove auto pop-ups; show offers as dismissible inline cards.</li>
+</ul>
+<div class="sketch">
+  <div class="label">Sketch: Simplified Home</div>
+  <div class="screen-mock">
+    <div class="bar">🔍 Search food...</div>
+    <div class="item">🍕 Pizza  🍔 Burger  🍣 Sushi</div>
+    <div class="item">Featured: Pizza Palace</div>
+    <div class="item">Featured: Burger Hub</div>
+    <div class="item">Popular near you</div>
+  </div>
+</div>
+
+<h3>Improvement 2 — Streamlined Checkout</h3>
+<p><span class="tag">Conversion</span> Cut checkout steps from 5 taps to 2 by remembering preferences.</p>
+<ul>
+  <li>Auto-select last-used address and payment method.</li>
+  <li>One-tap coupon application with best-offer auto-suggest.</li>
+  <li>Remove pre-selected donations/tips; make them opt-in with clear labels.</li>
+</ul>
+<div class="sketch">
+  <div class="label">Sketch: One-screen Checkout</div>
+  <div class="screen-mock">
+    <div class="bar">Checkout</div>
+    <div class="item">📍 Home (saved)</div>
+    <div class="item">💳 UPI (saved)</div>
+    <div class="item">🏷️ Best coupon applied: −$3</div>
+    <div class="item" style="background:#E23744;color:#fff;font-weight:600;">Place Order · $19.47</div>
+  </div>
+</div>
+
+<h3>Improvement 3 — Personalized & Inclusive Discovery</h3>
+<p><span class="tag">Engagement</span> Help users find food that fits their needs and diet.</p>
+<ul>
+  <li>Dietary filters (veg/vegan/gluten-free) persisted across sessions.</li>
+  <li>"Reorder" shortcut on home for last 3 orders.</li>
+  <li>Improved contrast and larger tap targets (min 44px) for accessibility.</li>
+</ul>
+<div class="sketch">
+  <div class="label">Sketch: Personalized Home</div>
+  <div class="screen-mock">
+    <div class="bar">Hi Alex 👋</div>
+    <div class="item">Reorder: Margherita · $8.99</div>
+    <div class="item">Filter: 🌱 Veg  🌾 GF</div>
+    <div class="item">Recommended for you</div>
+  </div>
+</div>
+
+<div class="pagebreak"></div>
+
+<h2>6. Conclusion</h2>
+<p>The proposed changes target the three highest-friction areas: discovery clutter, checkout length, and personalization/accessibility. Together they should reduce time-to-order, increase conversion, and improve inclusivity while preserving Zomato's strengths in tracking and payments.</p>
+
+<h2>7. References</h2>
+<ul>
+  <li>Zomato mobile app (Android/iOS) — observed flows.</li>
+  <li>Nielsen Norman Group — usability heuristics.</li>
+  <li>WCAG 2.2 — accessibility guidelines.</li>
+</ul>
+
+<p class="meta">— End of report —</p>
+</body>
+</html>
